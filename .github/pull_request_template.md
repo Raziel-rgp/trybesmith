@@ -6,24 +6,24 @@ Você irá desenvolver todas as camadas da aplicação (Models, Service e Contro
 
 ## Missão essencial
 
-- [X] PR aberto para entrega do projeto TrybeSmith
+- [X] PR aberto para entrega do projeto TrybeSmith.
 
 ## O que preciso saber para fazer o projeto?
 
 - [ ] Como trabalhar com tipagem na definição de variáveis e parâmetros.
-- [ ] Como definir interfaces/types
+- [ ] Como definir interfaces/types.
 - [ ] Como trabalhar com tipagem para definir o retorno das funções
 - [ ] Como trabalhar com Generics para trabalhar com funções genéricas.
-- [ ] Como trabalhar com classes e objetos (opcional mas fortemente recomendado)
-- [ ] Como aplicar typescript em uma aplicação MSC com Express e MySQL2
+- [ ] Como trabalhar com classes e objetos (opcional mas fortemente recomendado).
+- [ ] Como aplicar TypeScript em uma aplicação MSC com Express e MySQL2.
 
 ## Habilidades para o projeto
 
 ### _Vão ser necessárias para realização do projeto_
 
-- [ ] [Introdução ao Typescript](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/94d0e996-1827-4fbc-bc24-c99fb592925b/section/4e3b7d3a-94a1-4fce-9545-0f2b04f8ccd9/day/f2bc13d9-91a6-488b-aa3f-257b0f5bb449/lesson/976bc3f9-ad3e-4ced-bf14-67343a363626)
+- [ ] [Introdução ao TypeScript](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/94d0e996-1827-4fbc-bc24-c99fb592925b/section/4e3b7d3a-94a1-4fce-9545-0f2b04f8ccd9/day/f2bc13d9-91a6-488b-aa3f-257b0f5bb449/lesson/976bc3f9-ad3e-4ced-bf14-67343a363626)
 - [ ] [Tipagem estática e generics](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/94d0e996-1827-4fbc-bc24-c99fb592925b/section/4e3b7d3a-94a1-4fce-9545-0f2b04f8ccd9/day/55580b57-6754-49bc-83bf-465967e0d2a1/lesson/7c809271-81e8-4ac7-bf38-75dc6125d448)
-- [ ] [Express com Typescript](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/94d0e996-1827-4fbc-bc24-c99fb592925b/section/4e3b7d3a-94a1-4fce-9545-0f2b04f8ccd9/day/c88d68dd-f399-4d5a-ad33-8d01fb4f4967/lesson/850919c0-4ac6-4c8a-bf07-c7a07ad4fb4a)
+- [ ] [Express com TypeScript](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/94d0e996-1827-4fbc-bc24-c99fb592925b/section/4e3b7d3a-94a1-4fce-9545-0f2b04f8ccd9/day/c88d68dd-f399-4d5a-ad33-8d01fb4f4967/lesson/850919c0-4ac6-4c8a-bf07-c7a07ad4fb4a)
 
 Além disso recomendamos fortemente usar a documentação do TypeScript como um ponto de consulta para entender com mais profundidade os recursos do TS.
 
