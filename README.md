@@ -45,7 +45,7 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
   * Este projeto é individual
   * Serão `2` dias de projeto.
   * Data de entrega para avaliação regular do projeto: `22/03/2023 14:00`.
-  * Data de entrega para avaliação final do projeto: `10/04/2023 14:00`.
+  * Data de entrega para avaliação final do projeto: `22/03/2023 14:00`.
 
 </details>
 
