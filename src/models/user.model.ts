@@ -1,4 +1,4 @@
-import { ResultSetHeader, RowDataPacket } from 'mysql2';
+import { ResultSetHeader } from 'mysql2';
 import { NewUser, User } from '../interfaces/user.interface';
 import connection from './connection';
 
@@ -11,13 +11,6 @@ const newUser = async (user: NewUser): Promise<User> => {
   return { id: insertId, ...user };
 };
 
-const getUser = async (): Promise<User[]> => {
-  const [result] = await connection.execute<User[] & RowDataPacket[]>(
-    'SELECT * FROM Trybesmith.users',
-  );
-  return result;
-};
-
-const userModel = { newUser, getUser };
+const userModel = { newUser };
 
 export default userModel;
