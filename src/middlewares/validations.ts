@@ -12,7 +12,25 @@ const productSchema = Joi.object({
   amount: Joi.string().required().min(3),
 });
 
-const validateProductAmount = (req: Request, res: Response, next: NextFunction) => {
+const userSchema = Joi.object({
+  username: Joi.string().required().min(3),
+  vocation: Joi.string().required().min(3),
+  level: Joi.number().required().min(1),
+  password: Joi.string().required().min(8),
+});
+
+const validateUser = (req: Request, res: Response, next: NextFunction) => {
+  const { error } = userSchema.validate(req.body);
+  if (error) {
+    if (error.details[0].type === 'any.required') {
+      return res.status(400).json({ message: error.details[0].message });
+    } 
+    return res.status(422).json({ message: error.details[0].message });
+  }
+  next();
+};
+
+const validateProduct = (req: Request, res: Response, next: NextFunction) => {
   const { error } = productSchema.validate(req.body);
   if (error) {
     if (error.details[0].type === 'any.required') {
@@ -36,4 +54,4 @@ const validateLogin = async (req: Request, res: Response, next: NextFunction) =>
   next();
 };
 
-export { loginSchema, validateLogin, validateProductAmount };
+export { loginSchema, validateLogin, validateProduct, validateUser };
