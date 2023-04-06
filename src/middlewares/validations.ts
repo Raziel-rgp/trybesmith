@@ -2,6 +2,8 @@ import Joi from 'joi';
 import { Request, Response, NextFunction } from 'express';
 import loginModel from '../models/login.model';
 
+const anyRequired = 'any.required';
+
 const loginSchema = Joi.object({
   username: Joi.string().required(),
   password: Joi.string().required(),
@@ -19,12 +21,31 @@ const userSchema = Joi.object({
   password: Joi.string().required().min(8),
 });
 
+const orderSchema = Joi.object({
+  productsIds: Joi.array().items(Joi.number()).min(1).required()
+    .messages({
+      'array.min': '{#label} must include only numbers',
+    }),
+});
+
+const validateOrder = (req: Request, res: Response, next: NextFunction) => {
+  const { error } = orderSchema.validate(req.body);
+  if (error) {
+    if (error.details[0].type === anyRequired) {
+      return res.status(400).json({ message: error.details[0].message });
+    }
+    return res.status(422).json({ message: error.details[0].message });
+  }
+  console.log('validou order');
+  next();
+};
+
 const validateUser = (req: Request, res: Response, next: NextFunction) => {
   const { error } = userSchema.validate(req.body);
   if (error) {
-    if (error.details[0].type === 'any.required') {
+    if (error.details[0].type === anyRequired) {
       return res.status(400).json({ message: error.details[0].message });
-    } 
+    }
     return res.status(422).json({ message: error.details[0].message });
   }
   next();
@@ -33,7 +54,7 @@ const validateUser = (req: Request, res: Response, next: NextFunction) => {
 const validateProduct = (req: Request, res: Response, next: NextFunction) => {
   const { error } = productSchema.validate(req.body);
   if (error) {
-    if (error.details[0].type === 'any.required') {
+    if (error.details[0].type === anyRequired) {
       return res.status(400).json({ message: error.details[0].message });
     } 
     return res.status(422).json({ message: error.details[0].message });
@@ -54,4 +75,4 @@ const validateLogin = async (req: Request, res: Response, next: NextFunction) =>
   next();
 };
 
-export { loginSchema, validateLogin, validateProduct, validateUser };
+export { loginSchema, validateLogin, validateProduct, validateUser, validateOrder };
